@@ -1,0 +1,168 @@
+[debug] [2023-05-28T15:59:08.749Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T15:59:08.750Z] Command:       /usr/bin/node /usr/bin/firebase deploy --only hosting --debug
+[debug] [2023-05-28T15:59:08.751Z] CLI Version:   12.2.1
+[debug] [2023-05-28T15:59:08.751Z] Platform:      linux
+[debug] [2023-05-28T15:59:08.751Z] Node Version:  v16.19.0
+[debug] [2023-05-28T15:59:08.751Z] Time:          Sun May 28 2023 17:59:08 GMT+0200 (Средњеевропско летње време)
+[debug] [2023-05-28T15:59:08.752Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T15:59:08.810Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T15:59:08.811Z] > authorizing via signed-in user (mixacr715@gmail.com)
+[debug] [2023-05-28T15:59:08.811Z] [iam] checking project tictactoe-11a95 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-28T15:59:08.813Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions [none]
+[debug] [2023-05-28T15:59:08.813Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions x-goog-quota-user=projects/tictactoe-11a95
+[debug] [2023-05-28T15:59:08.813Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-28T15:59:09.712Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions 200
+[debug] [2023-05-28T15:59:09.712Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-28T15:59:09.713Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 [none]
+[debug] [2023-05-28T15:59:10.016Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 200
+[debug] [2023-05-28T15:59:10.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 {"projectId":"tictactoe-11a95","projectNumber":"894801248504","displayName":"TicTacToe","name":"projects/tictactoe-11a95","resources":{"hostingSite":"tictactoe-11a95"},"state":"ACTIVE","etag":"1_b7d77c4b-91fd-4265-8817-a5c5294d3957"}
+[info] 
+[info] === Deploying to 'tictactoe-11a95'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-28T15:59:10.022Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions [none]
+[debug] [2023-05-28T15:59:10.022Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-28T15:59:11.141Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions 200
+[debug] [2023-05-28T15:59:11.141Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions {"name":"projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[tictactoe-11a95]: beginning deploy... 
+[info] i  hosting[tictactoe-11a95]: found 7 files in dist/tic-tac-toe 
+[debug] [2023-05-28T15:59:11.149Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-28T15:59:11.153Z] [hosting] hash cache [ZGlzdC90aWMtdGFjLXRvZQ] stored for 7 files
+[debug] [2023-05-28T15:59:11.153Z] [hosting][hash queue][FINAL] {"max":1,"min":1,"avg":1,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":3}
+[debug] [2023-05-28T15:59:11.154Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9:populateFiles [none]
+[debug] [2023-05-28T15:59:11.154Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9:populateFiles {"files":{"/3rdpartylicenses.txt":"d618452e57bc3580f1a8219dd91e519a73a0a168d0039fd21ea6f9d2a216245e","/favicon.ico":"5ba04cf43d3c8c026bd5edd43046db96acb28b5686d99ea7d7e148feabfffc8f","/index.html":"5bc953db242b957722ae238e92c7eeb772ccd930e655946777b29e1a3934bd46","/main.4f235a16fc857e2d.js":"4ed4cfcfcf55851c78b8ec3779b68e977e73a8c93cee83d497727fa91ee7a6fd","/polyfills.62d64dccd8aa2b30.js":"b5a7d678919d1fc4b59c565adc50004f12093ad3e1ecc910cb5ae2688870f978","/runtime.5302ed0b6835b6bd.js":"e56f95362cc313fd5f4429d33c003b949967ce095b18ce938436fa8a3be2dc3d","/styles.56201ffd13e3ce69.css":"e88d976304755b68a8344fce8b2c4cc11532cc130d1bb253946b43d21f84fb24"}}
+[debug] [2023-05-28T15:59:12.165Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9:populateFiles 200
+[debug] [2023-05-28T15:59:12.166Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/a3eb431dda9c51f9/files"}
+[debug] [2023-05-28T15:59:12.166Z] [hosting][populate queue][FINAL] {"max":1014,"min":1014,"avg":1014,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1014}
+[debug] [2023-05-28T15:59:12.166Z] [hosting] uploads queued: 0
+[debug] [2023-05-28T15:59:12.166Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1685289552166}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[tictactoe-11a95]: file upload complete 
+[debug] [2023-05-28T15:59:12.167Z] [hosting] deploy completed after 1024ms
+[debug] [2023-05-28T15:59:12.168Z] [
+  {
+    "config": {
+      "public": "dist/tic-tac-toe",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "tictactoe-11a95"
+    },
+    "version": "projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9"
+  }
+]
+[info] i  hosting[tictactoe-11a95]: finalizing version... 
+[debug] [2023-05-28T15:59:12.171Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/a3eb431dda9c51f9 updateMask=status%2Cconfig
+[debug] [2023-05-28T15:59:12.171Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/a3eb431dda9c51f9 {"status":"FINALIZED","config":{}}
+[debug] [2023-05-28T15:59:13.087Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/a3eb431dda9c51f9 200
+[debug] [2023-05-28T15:59:13.087Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/a3eb431dda9c51f9 {"name":"projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T15:59:11.009141Z","createUser":{"email":"mixacr715@gmail.com"},"finalizeTime":"2023-05-28T15:59:13.166130Z","finalizeUser":{"email":"mixacr715@gmail.com"}}
+[debug] [2023-05-28T15:59:13.087Z] [hosting] finalized version for tictactoe-11a95:[object Object]
+[info] ✔  hosting[tictactoe-11a95]: version finalized 
+[info] i  hosting[tictactoe-11a95]: releasing new version... 
+[debug] [2023-05-28T15:59:13.088Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases versionName=projects%2F894801248504%2Fsites%2Ftictactoe-11a95%2Fversions%2Fa3eb431dda9c51f9
+[debug] [2023-05-28T15:59:13.088Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases {}
+[debug] [2023-05-28T15:59:14.024Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases 200
+[debug] [2023-05-28T15:59:14.024Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases {"name":"projects/894801248504/sites/tictactoe-11a95/channels/live/releases/1685289553563000","version":{"name":"projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T15:59:11.009141Z","createUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"},"finalizeTime":"2023-05-28T15:59:13.166130Z","finalizeUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}},"type":"DEPLOY","releaseTime":"2023-05-28T15:59:13.563Z","releaseUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}}
+[debug] [2023-05-28T15:59:14.024Z] [hosting] release: {"name":"projects/894801248504/sites/tictactoe-11a95/channels/live/releases/1685289553563000","version":{"name":"projects/894801248504/sites/tictactoe-11a95/versions/a3eb431dda9c51f9","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T15:59:11.009141Z","createUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"},"finalizeTime":"2023-05-28T15:59:13.166130Z","finalizeUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}},"type":"DEPLOY","releaseTime":"2023-05-28T15:59:13.563Z","releaseUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}}
+[info] ✔  hosting[tictactoe-11a95]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/tictactoe-11a95/overview
+[info] Hosting URL: https://tictactoe-11a95.web.app
+[debug] [2023-05-28T21:05:33.843Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T21:05:33.844Z] Command:       /usr/bin/node /usr/bin/firebase deploy --only hosting --debug
+[debug] [2023-05-28T21:05:33.845Z] CLI Version:   12.2.1
+[debug] [2023-05-28T21:05:33.845Z] Platform:      linux
+[debug] [2023-05-28T21:05:33.845Z] Node Version:  v16.19.0
+[debug] [2023-05-28T21:05:33.849Z] Time:          Sun May 28 2023 23:05:33 GMT+0200 (Средњеевропско летње време)
+[debug] [2023-05-28T21:05:33.849Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T21:05:33.910Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T21:05:33.911Z] > authorizing via signed-in user (mixacr715@gmail.com)
+[debug] [2023-05-28T21:05:33.912Z] [iam] checking project tictactoe-11a95 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-28T21:05:33.913Z] > refreshing access token with scopes: []
+[debug] [2023-05-28T21:05:33.915Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-28T21:05:33.915Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-28T21:05:34.084Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-28T21:05:34.084Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-28T21:05:34.088Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions [none]
+[debug] [2023-05-28T21:05:34.088Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions x-goog-quota-user=projects/tictactoe-11a95
+[debug] [2023-05-28T21:05:34.088Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-28T21:05:34.969Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions 200
+[debug] [2023-05-28T21:05:34.970Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tictactoe-11a95:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-28T21:05:34.971Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 [none]
+[debug] [2023-05-28T21:05:35.277Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 200
+[debug] [2023-05-28T21:05:35.277Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tictactoe-11a95 {"projectId":"tictactoe-11a95","projectNumber":"894801248504","displayName":"TicTacToe","name":"projects/tictactoe-11a95","resources":{"hostingSite":"tictactoe-11a95"},"state":"ACTIVE","etag":"1_6f228177-f08c-47fa-907d-c6e56080b8a9"}
+[info] 
+[info] === Deploying to 'tictactoe-11a95'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-28T21:05:35.282Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions [none]
+[debug] [2023-05-28T21:05:35.282Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-28T21:05:36.609Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions 200
+[debug] [2023-05-28T21:05:36.609Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions {"name":"projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[tictactoe-11a95]: beginning deploy... 
+[info] i  hosting[tictactoe-11a95]: found 7 files in dist/tic-tac-toe 
+[debug] [2023-05-28T21:05:36.616Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-28T21:05:36.638Z] [hosting] hash cache [ZGlzdC90aWMtdGFjLXRvZQ] stored for 7 files
+[debug] [2023-05-28T21:05:36.639Z] [hosting][hash queue][FINAL] {"max":17,"min":5,"avg":7.571428571428571,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":22}
+[debug] [2023-05-28T21:05:36.639Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1:populateFiles [none]
+[debug] [2023-05-28T21:05:36.639Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1:populateFiles {"files":{"/favicon.ico":"5ba04cf43d3c8c026bd5edd43046db96acb28b5686d99ea7d7e148feabfffc8f","/index.html":"2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841","/runtime.5302ed0b6835b6bd.js":"e56f95362cc313fd5f4429d33c003b949967ce095b18ce938436fa8a3be2dc3d","/3rdpartylicenses.txt":"d618452e57bc3580f1a8219dd91e519a73a0a168d0039fd21ea6f9d2a216245e","/styles.9e10589743d4b2d3.css":"53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4","/polyfills.62d64dccd8aa2b30.js":"b5a7d678919d1fc4b59c565adc50004f12093ad3e1ecc910cb5ae2688870f978","/main.602a6e5378cf33cc.js":"5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413"}}
+[debug] [2023-05-28T21:05:37.630Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1:populateFiles 200
+[debug] [2023-05-28T21:05:37.630Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1:populateFiles {"uploadRequiredHashes":["53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4","5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413","2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files"}
+[debug] [2023-05-28T21:05:37.631Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4 [none]
+[debug] [2023-05-28T21:05:37.631Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4 [stream]
+[debug] [2023-05-28T21:05:37.632Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413 [none]
+[debug] [2023-05-28T21:05:37.633Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413 [stream]
+[debug] [2023-05-28T21:05:37.634Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841 [none]
+[debug] [2023-05-28T21:05:37.634Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841 [stream]
+[debug] [2023-05-28T21:05:37.635Z] [hosting][populate queue][FINAL] {"max":994,"min":994,"avg":994,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":998}
+[debug] [2023-05-28T21:05:37.635Z] [hosting] uploads queued: 3
+[info] i  hosting: uploading new files [0/3] (0%) 
+[debug] [2023-05-28T21:05:39.034Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841 200
+[debug] [2023-05-28T21:05:39.034Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/2dcc51154273042f2714adb8f00e95c6e419a89632054cd0e5e94e64c6997841 [stream]
+[debug] [2023-05-28T21:05:39.065Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413 200
+[debug] [2023-05-28T21:05:39.065Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/5e296d343338f093ff765e167059b1b2ae6c196f0dc74d82ee9c67d19f4d8413 [stream]
+[debug] [2023-05-28T21:05:39.473Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4 200
+[debug] [2023-05-28T21:05:39.473Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tictactoe-11a95/versions/f0160440766713f1/files/53f9aee7351a1a8f5c058f82ef89b935fecf7fcde715a88cf417251f400f6bc4 [stream]
+[debug] [2023-05-28T21:05:39.474Z] [hosting][upload queue][FINAL] {"max":1844,"min":1403,"avg":1560.3333333333333,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":1844}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[tictactoe-11a95]: file upload complete 
+[debug] [2023-05-28T21:05:39.475Z] [hosting] deploy completed after 2864ms
+[debug] [2023-05-28T21:05:39.476Z] [
+  {
+    "config": {
+      "public": "dist/tic-tac-toe",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "tictactoe-11a95"
+    },
+    "version": "projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1"
+  }
+]
+[info] i  hosting[tictactoe-11a95]: finalizing version... 
+[debug] [2023-05-28T21:05:39.478Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/f0160440766713f1 updateMask=status%2Cconfig
+[debug] [2023-05-28T21:05:39.478Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/f0160440766713f1 {"status":"FINALIZED","config":{}}
+[debug] [2023-05-28T21:05:40.498Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/f0160440766713f1 200
+[debug] [2023-05-28T21:05:40.498Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/versions/f0160440766713f1 {"name":"projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T21:05:36.138248Z","createUser":{"email":"mixacr715@gmail.com"},"finalizeTime":"2023-05-28T21:05:40.288661Z","finalizeUser":{"email":"mixacr715@gmail.com"}}
+[debug] [2023-05-28T21:05:40.499Z] [hosting] finalized version for tictactoe-11a95:[object Object]
+[info] ✔  hosting[tictactoe-11a95]: version finalized 
+[info] i  hosting[tictactoe-11a95]: releasing new version... 
+[debug] [2023-05-28T21:05:40.500Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases versionName=projects%2F894801248504%2Fsites%2Ftictactoe-11a95%2Fversions%2Ff0160440766713f1
+[debug] [2023-05-28T21:05:40.500Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases {}
+[debug] [2023-05-28T21:05:41.522Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases 200
+[debug] [2023-05-28T21:05:41.522Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tictactoe-11a95/channels/live/releases {"name":"projects/894801248504/sites/tictactoe-11a95/channels/live/releases/1685307940778000","version":{"name":"projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T21:05:36.138248Z","createUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"},"finalizeTime":"2023-05-28T21:05:40.288661Z","finalizeUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}},"type":"DEPLOY","releaseTime":"2023-05-28T21:05:40.778Z","releaseUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}}
+[debug] [2023-05-28T21:05:41.522Z] [hosting] release: {"name":"projects/894801248504/sites/tictactoe-11a95/channels/live/releases/1685307940778000","version":{"name":"projects/894801248504/sites/tictactoe-11a95/versions/f0160440766713f1","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-28T21:05:36.138248Z","createUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"},"finalizeTime":"2023-05-28T21:05:40.288661Z","finalizeUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}},"type":"DEPLOY","releaseTime":"2023-05-28T21:05:40.778Z","releaseUser":{"email":"mixacr715@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteyjWfDysMYdj_xdG1kveK6Xyz30tjFUSWQtMIy=mo"}}
+[info] ✔  hosting[tictactoe-11a95]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/tictactoe-11a95/overview
+[info] Hosting URL: https://tictactoe-11a95.web.app

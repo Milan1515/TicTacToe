@@ -11,3 +11,13 @@ section {
 .square-container {
     flex: 0 0 32%;
 }
+
+@media  screen and (max-width: 600px) {
+    section {
+        width: 308px;
+        margin: 8% auto 50px auto;
+    }
+    .h-48 {
+        height: 8rem;
+    }
+}

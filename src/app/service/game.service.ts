@@ -44,7 +44,7 @@ changePlayerTurn(squareClicked: any) {
   this.updateBoard(squareClicked);
   if(!this.isGameOver) this.activePlayer = this.activePlayer == "X" ? "O" : "X"
    this.turnCount++;
-   this.isGameOver = this.isGameOver ? true : false
+   this.isGameOver = this.isGameOver ? true : false;
 }
 
 updateBoard(squareClicked: any) {
