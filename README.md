@@ -33,5 +33,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
   <li>Tailwind css</li>
 </ul>
 <h2>Check out the app!</h2>
-<p>You can check out the deployed app at the following link: <a href="https://tictactoe-11a95.firebaseapp.com"</a></p>
+<p>You can check out the deployed app at the following link: <a href="https://tictactoe-11a95.firebaseapp.com"</a>https://tictactoe-11a95.firebaseapp.com</p>
 <p>Feel free to play around with the app and see how it works!</p>
